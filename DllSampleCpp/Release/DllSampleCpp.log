@@ -1,0 +1,77 @@
+﻿2017/04/05 17:26:44 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\ito.OHSHIMAT-PC\Desktop\SOM\DllSampleCpp\DllSampleCpp.vcxproj" (rebuild ターゲット)。
+     1>_PrepareForClean:
+         ファイル "Release\DllSampleCpp.lastbuildstate" を削除しています。
+       InitializeBuildStatus:
+         "AlwaysCreate" が指定されたため "Release\DllSampleCpp.unsuccessfulbuild" を作成しています。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\DllSampleCpp.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         Note: including lib: glut32.lib
+         
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\DllSampleCpp.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DllSampleCpp.cpp DllSampleCppDlg.cpp mfcconsole.cpp Scene.cpp
+         DllSampleCpp.cpp
+         DllSampleCppDlg.cpp
+     1>DllSampleCppDlg.cpp(1118): warning C4800: 'BOOL' : ブール値を 'true' または 'false' に強制的に設定します (警告の処理)
+     1>DllSampleCppDlg.cpp(1173): warning C4101: 'kkkk' : ローカル変数は 1 度も使われていません。
+     1>DllSampleCppDlg.cpp(1280): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 'fopen' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1338): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 'fopen' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1349): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 'fscanf' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1350): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 'fscanf' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1374): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 'fopen' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1382): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>DllSampleCppDlg.cpp(1372): warning C4101: 'j' : ローカル変数は 1 度も使われていません。
+     1>DllSampleCppDlg.cpp(1414): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 'fopen' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1422): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>DllSampleCppDlg.cpp(1423): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 'fscanf' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1425): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 'fscanf' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1411): warning C4101: 'j' : ローカル変数は 1 度も使われていません。
+     1>DllSampleCppDlg.cpp(1722): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 'fopen' の宣言を確認してください。
+     1>DllSampleCppDlg.cpp(1723): warning C4552: '<' : 演算子にプログラム上の作用がありません。作用を伴う演算子を使用してください
+         mfcconsole.cpp
+     1>mfcconsole.cpp(24): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 'strcat' の宣言を確認してください。
+     1>mfcconsole.cpp(25): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 'strcat' の宣言を確認してください。
+         Scene.cpp
+     1>Scene.cpp(235): warning C4552: '+' : 演算子にプログラム上の作用がありません。作用を伴う演算子を使用してください
+     1>Scene.cpp(327): warning C4101: 'denom' : ローカル変数は 1 度も使われていません。
+     1>Scene.cpp(328): warning C4101: 'hci' : ローカル変数は 1 度も使われていません。
+     1>Scene.cpp(329): warning C4101: 'dist' : ローカル変数は 1 度も使われていません。
+     1>Scene.cpp(459): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 'sprintf' の宣言を確認してください。
+     1>Scene.cpp(467): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 'sprintf' の宣言を確認してください。
+     1>Scene.cpp(1025): warning C4101: 'ui' : ローカル変数は 1 度も使われていません。
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _AFXDLL /l"0x0411" /IRelease\ /nologo /fo"Release\DllSampleCpp.res" DllSampleCpp.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ito.OHSHIMAT-PC\Desktop\SOM\Release\DllSampleCpp.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\2014年度\CUDA\cuda_by_example\lib" /MANIFEST /ManifestFile:"Release\DllSampleCpp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\ito.OHSHIMAT-PC\Desktop\SOM\Release\DllSampleCpp.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ito.OHSHIMAT-PC\Desktop\SOM\Release\DllSampleCpp.lib" /MACHINE:X86 Release\DllSampleCpp.res
+         Release\DllSampleCpp.obj
+         Release\DllSampleCppDlg.obj
+         Release\mfcconsole.obj
+         Release\Scene.obj
+         Release\stdafx.obj
+         コード生成しています。
+     1>c:\users\ito.ohshimat-pc\desktop\som\dllsamplecpp\dllsamplecppdlg.cpp(1709): warning C4715: 'CDllSampleCppDlg::PreTranslateMessage' : 値を返さないコントロール パスがあります。
+         コード生成が終了しました。
+         DllSampleCpp.vcxproj -> C:\Users\ito.OHSHIMAT-PC\Desktop\SOM\Release\DllSampleCpp.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\ito.OHSHIMAT-PC\Desktop\SOM\Release\DllSampleCpp.exe;#1" /manifest Release\DllSampleCpp.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         ファイル "Release\DllSampleCpp.unsuccessfulbuild" を削除しています。
+         "Release\DllSampleCpp.lastbuildstate" のタッチ タスクを実行しています。
+     1>プロジェクト "C:\Users\ito.OHSHIMAT-PC\Desktop\SOM\DllSampleCpp\DllSampleCpp.vcxproj" (rebuild ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:04.23
