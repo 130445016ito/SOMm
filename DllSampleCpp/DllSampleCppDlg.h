@@ -128,7 +128,21 @@ public:
 	double **accArrDlg;
 	double *curAccArrDlg;//2月9日追加
 	int numSample;
-
+//センサ情報
+	//const double bit_scale = 65535;
+	//const double acc_0= 1.65;
+	//const double s_acc= 0.057;
+	//const double ang_0= 1.5;
+	//const double s_ang= 0.0008;
+	static  const int acc_1 = 3.3/(65535*0.057);
+    static  const int acc_2= 1.65/0.057;
+	static  const int ang_1= 3.3/(65535*0.0008);
+    static  const int ang_2= 1.5/0.0008;
+//補正係数定義
+	//　補正係数の定義 （加速度）
+	static  const int acc_a_x = 2.1476, acc_a_y = 2.1891, acc_a_z = 2.1311;	//	a:傾き
+	static  const int acc_bias_x = -1.5705, acc_bias_y = -0.6965, acc_bias_z = -0.6287 ;	//	bias:バイアス
+	
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedNandemotestbutton();
 
@@ -155,7 +169,10 @@ public:
 	afx_msg void OnBnClickedButton9();
 	afx_msg void OnBnClickedButton8();
 	afx_msg void OnStnClickedGlview();
+
+	
 };
+
 
 ///////////////////////////////////////
 // メインスレッドへの送信データクラス
@@ -178,3 +195,4 @@ public:
 	double iemg[2];
 
 };
+

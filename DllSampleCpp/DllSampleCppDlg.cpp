@@ -122,7 +122,7 @@ CDllSampleCppDlg::CDllSampleCppDlg(CWnd* pParent /*=NULL*/)
 				curAccArrDlg[i]=0;
 	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
-
+		
 
 	//<A-1>
 
@@ -279,15 +279,10 @@ void CDllSampleCppDlg::CbStartMeasure(const char *port_name, unsigned char *buff
 	*/
 	// 加速度データ解析/////////↓AD変換↓////////////////////////
 	WmsData data(packet.data[0], packet.pid);
-	const double bit_scale = 65535;
-	const double acc_0 = 1.65;
-	const double s_acc = 0.057; //1Gあたりの感度を38.5mV/G(30G)に一次変更(9/22)(s_acc=0.385)　//元データは，s_acc = 0.057　感度は大きいほうが精度が高いかも
-	const double ang_0 = 1.5;
-	const double s_ang = 0.0008; //センサー感度を3.624mV/dps(300dps)に一次変更(9/22)(s_ang = 0.003624)　//元データは，s_ang = 0.0008
-	
+	//センサ情報の定義は.h参照
 	for(int i=0; i<3; i++){
-		msg.acc[i] = (3.3 * data.acc[i] / bit_scale - acc_0) / s_acc;
-		msg.ang[i] = (3.3 * data.ang[i] / bit_scale - ang_0) / s_ang;
+		msg.acc[i] = (data.acc[i] * acc_1) - acc_2;
+		msg.ang[i] =( data.ang[i] * ang_1) - ang_2;
 	}
 
 
@@ -298,8 +293,10 @@ void CDllSampleCppDlg::CbStartMeasure(const char *port_name, unsigned char *buff
 		//msgemg.emg[i] = (dataemg.emg[i] / 4095 * 3.3) / ( 6.8 / 11.5 );
 		//msgemg.iemg[i] = (dataemg.iemg[i] / 4095 * 3.3) / ( 6.8 / 11.5 );
 		///上記の計算式だと不安定だったため下記に変更し簡単にした(11/2)///
-		msgemg.emg[i] = dataemg.emg[i] * ( 379.5 / 278460 );
-		msgemg.iemg[i] = dataemg.iemg[i] * ( 379.5 / 278460 );
+		///msgemg.emg[i] = dataemg.emg[i] * ( 379.5 / 278460 );
+		///msgemg.iemg[i] = dataemg.iemg[i] * ( 379.5 / 278460 );
+		msgemg.emg[i] = dataemg.emg[i] *  0.0013628528334411 ;
+		msgemg.iemg[i] = dataemg.iemg[i] *  0.0013628528334411 ;
 	}
 
 	
@@ -316,10 +313,10 @@ void CDllSampleCppDlg::CbStartMeasure(const char *port_name, unsigned char *buff
 	///全波整流（筋電計データ処理）1/17///
 	for(int i=0;i<2;i++){
 		if(msgemg.emg[i]<0){
-			msgemg.emg[i] = msgemg.emg[i] * (-1);
+			msgemg.emg[i] *= (-1);
 		}
 		if(msgemg.iemg[i]<0){
-			msgemg.iemg[i] = msgemg.iemg[i] * (-1);
+			msgemg.iemg[i] *= (-1);
 		}
 	}
 
@@ -338,9 +335,10 @@ void CDllSampleCppDlg::CbStartMeasure(const char *port_name, unsigned char *buff
 	////////////////////////////////////////////////////////////////////
 	
 	
-	//　補正係数の定義 （加速度）
-	double acc_a_x, acc_a_y, acc_a_z;	//	a:傾き
-	double acc_bias_x, acc_bias_y, acc_bias_z;	//	bias:バイアス
+	//　補正係数の定義 （加速度） →→→.hに定義
+
+	//double acc_a_x, acc_a_y, acc_a_z;	//	a:傾き
+	//double acc_bias_x, acc_bias_y, acc_bias_z;	//	bias:バイアス
 
 		//////////////↓ID=1の補正式↓////////////
 
@@ -386,14 +384,14 @@ void CDllSampleCppDlg::CbStartMeasure(const char *port_name, unsigned char *buff
 	
 
 		
-		//補正係数入力(加速度)
+		//補正係数入力(加速度)　→→→.hに定義
 	
-	acc_a_x=2.1476;			////////////////////////////////////////	
-	acc_a_y=2.1891;			////////////////////////////////////////
-	acc_a_z=2.1311;			////////	ここに値を入力　　//////////
-	acc_bias_x=-1.5705;		////////////////////////////////////////
-	acc_bias_y=-0.6965;		////////////////////////////////////////
-	acc_bias_z=-0.6287;		////////////////////////////////////////
+	//acc_a_x=2.1476;			////////////////////////////////////////	
+	//acc_a_y=2.1891;			////////////////////////////////////////
+	//acc_a_z=2.1311;			////////	ここに値を入力　　//////////
+	//acc_bias_x=-1.5705;		////////////////////////////////////////
+	//acc_bias_y=-0.6965;		////////////////////////////////////////
+	//acc_bias_z=-0.6287;		////////////////////////////////////////
 
 	
 	msg.acc[0] = (msg.acc[0]+acc_bias_x)*acc_a_x;		//////////
